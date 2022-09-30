@@ -41,19 +41,14 @@ public class SnakeController : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag  == "Obstacle")
-        {
-            
-            //gm.EndGame();
+        {            
             Debug.Log("Game Over");
         }
 
         if (collision.collider.tag == "EndLevel")
-        {
-            
-           // gm.EndGame();
+        {           
             Debug.Log("You Win!");
         }
-
     }
 
     void Update()

@@ -8,20 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Block
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: fa3fc2e667b3998409d8940c32cd6269, type: 3}
   m_ShaderKeywords: _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 83ec885314209724e9cd9e98550cb29d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -45,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 83ec885314209724e9cd9e98550cb29d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -77,6 +76,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_681b2c29e9794d4e95087443f34586bc: 0
+    - Vector1_97ecff0f9ae74cc5909ac9ebac1e330f: -0.36
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -104,9 +105,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_63b4f13b4df946dc845faaa894b19572: {r: 0, g: 0.7924528, b: 0.01400692, a: 0}
+    - Color_f047d501a29047aea81738e511a1ddc0: {r: 0.0006895965, g: 0, b: 0.8301887, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MaxBlockColor: {r: 0.0064791483, g: 0.03249722, b: 0.49056602, a: 1}
+    - _MinBlockColor: {r: 0, g: 1, b: 0.119636536, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &475009802035295807

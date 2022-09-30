@@ -98,7 +98,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 13
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.3
+  m_fontSize: 34.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 4605689938434434036}
   - component: {fileID: 4605689938434434035}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cube(0-5)
   m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1014,7 +1014,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 36c1138500e022049b8cd860366106d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1083,4 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462a76c4ec8ff7a46ae66a67dcfc7a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Number: 13
+  RandomNumber: {fileID: 4605689937071559487}
+  randomCount: 0
+  minRandom: 1
+  maxRandom: 20

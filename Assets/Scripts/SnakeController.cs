@@ -8,12 +8,18 @@ using TMPro;
 
 public class SnakeController : MonoBehaviour
 {
+    [SerializeField] private GameObject LosePanel;
+
     public GameManager gm;
     public Rigidbody rb;    
 
     public TextMeshPro PointsText;
 
-    public List<GameObject> tailObjects = new List<GameObject>();   
+    private bool ignoreNextCollision;
+
+    public List<GameObject> tailObjects = new List<GameObject>(); //tailObjects - Snake Lives    
+
+    
 
     public GameObject TailPrefab;
 
@@ -26,15 +32,12 @@ public class SnakeController : MonoBehaviour
     protected bool strafeRight = false;
 
     void Start()
-    {       
-
-        tailObjects.Add(gameObject);
-        
+    {
+        tailObjects.Add(gameObject);       
     }
 
     private void Awake()
-    {
-        
+    {       
         rb = GetComponent<Rigidbody>();
     }
 
@@ -47,6 +50,18 @@ public class SnakeController : MonoBehaviour
             Debug.Log("Game Over");
         }
 
+        if (ignoreNextCollision)
+        {
+            return;
+        }
+
+        if (collision.collider.tag == "Block")
+        {
+            ignoreNextCollision = true;
+            Invoke("AllowCollision", .2f);
+            Debug.Log("Check");
+        }
+
         if (collision.collider.tag == "EndLevel")
         {
             
@@ -54,6 +69,11 @@ public class SnakeController : MonoBehaviour
             Debug.Log("You Win!");
         }
 
+    }
+
+    private void AllowCollision()
+    {
+        ignoreNextCollision = false;
     }
 
     void Update()
@@ -104,8 +124,23 @@ public class SnakeController : MonoBehaviour
 
     public void LoseTail()
     {
-        //Destroy(tailObjects[1].gameObject);
+        
+        Destroy(TailPrefab);
                 
+
+        tailObjects.RemoveAt(tailObjects.Count - 1);
+
+
+        if (tailObjects.Count == 0)
+        {
+            Destroy(gameObject);
+            LosePanel.SetActive(true);
+            //GetComponent<GameManager>().EndGame();
+           ///Debug.Log("Game Over"); Доделать тут метод endGame!
+        }
+        //
+        //PointsText.text = tailObjects.Count.ToString();
+
     }
     
 

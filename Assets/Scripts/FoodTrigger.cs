@@ -10,6 +10,8 @@ public class FoodTrigger : MonoBehaviour
         {
             other.GetComponent<SnakeController>().AddTail();
             Destroy(gameObject);
+
+            GameManager.singleton.AddScore(10);
         }
     }   
 }
